@@ -42,7 +42,7 @@ class ViewController: UIViewController {
                 calcAction = .Subtract
             case "×":
                 calcAction = .Multiply
-            case "/":
+            case "÷":
                 calcAction = .Divide
             default:
                 return
@@ -108,24 +108,52 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnSlash(_ sender: Any) {
-        setAction(symbol: "/")
+        setAction(symbol: "÷")
     }
+    
+    @IBAction func addDecimalPoint(_ sender: Any) {
+        resultLabel.text? += String(".")
+    }
+    
     
     @IBAction func calculatePressed(_ sender: Any) {
         
         guard let nums = resultLabel.text?.components(separatedBy: CharacterSet.symbols) else { return }
+        guard nums.count == 2 else {
+            print(nums.count)
+            return }
         
         let left = nums[0]
         let right = nums[1]
         switch calcAction {
         case .Add:
-            resultLabel.text = String(Calculator.add(lhs: Float(left)!, rhs: Float(right)!))
+            let result = Calculator.add(lhs: Double(left)!, rhs: Double(right)!)
+            if result.truncatingRemainder(dividingBy: 1.0).isZero {
+                resultLabel.text = String(Int(result))
+            } else {
+                resultLabel.text = String(result)
+            }
         case .Subtract:
-            resultLabel.text = String(Calculator.subtract(lhs: Float(left)!, rhs: Float(right)!))
+            let result = Calculator.subtract(lhs: Double(left)!, rhs: Double(right)!)
+            if result.truncatingRemainder(dividingBy: 1.0).isZero {
+                resultLabel.text = String(Int(result))
+            } else {
+                resultLabel.text = String(result)
+            }
         case .Multiply:
-            resultLabel.text = String(Calculator.multiply(lhs: Float(left)!, rhs: Float(right)!))
+            let result = Calculator.multiply(lhs: Double(left)!, rhs: Double(right)!)
+            if result.truncatingRemainder(dividingBy: 1.0).isZero {
+                resultLabel.text = String(Int(result))
+            } else {
+                resultLabel.text = String(result)
+            }
         case .Divide:
-            resultLabel.text = String(Calculator.divide(lhs: Float(left)!, rhs: Float(right)!)!)
+            guard let result = Calculator.divide(lhs: Double(left)!, rhs: Double(right)!) else { return }
+            if result.truncatingRemainder(dividingBy: 1.0).isZero {
+                resultLabel.text = String(Int(result))
+            } else {
+                resultLabel.text = String(result)
+            }
         default:
             return
         }

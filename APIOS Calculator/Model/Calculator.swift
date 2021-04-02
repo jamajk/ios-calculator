@@ -8,19 +8,19 @@
 import Foundation
 
 class Calculator {
-    static func add(lhs: Float, rhs: Float) -> Float {
+    static func add(lhs: Double, rhs: Double) -> Double {
         return lhs + rhs
     }
     
-    static func subtract(lhs: Float, rhs: Float) -> Float {
+    static func subtract(lhs: Double, rhs: Double) -> Double {
         return lhs - rhs
     }
     
-    static func multiply(lhs: Float, rhs: Float) -> Float {
+    static func multiply(lhs: Double, rhs: Double) -> Double {
         return lhs * rhs
     }
     
-    static func divide(lhs: Float, rhs: Float) -> Float? {
+    static func divide(lhs: Double, rhs: Double) -> Double? {
         if rhs == 0 {
             return nil
         }
