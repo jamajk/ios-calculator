@@ -20,7 +20,13 @@ class Button: UIButton {
     
     override open var isHighlighted: Bool {
         didSet {
-            layer.opacity = isHighlighted ? 0.5 : 1
+            if isHighlighted {
+                layer.opacity = 0.5
+            } else {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.layer.opacity = 1
+                })
+            }
         }
     }
 }
