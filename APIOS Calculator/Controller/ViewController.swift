@@ -23,18 +23,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resultLabel.layer.cornerRadius = 10
+        resultLabel.layer.masksToBounds = true
     }
     
     private func addDigit(digit: Int) {
         if resultLabel.text != "0" {
-            resultLabel.text? += String(digit)
+            if resultLabel.text?.last == ")" {
+                resultLabel.text = (resultLabel.text?.dropLast())! + String(digit) + ")"
+            } else {
+                resultLabel.text? += String(digit)
+            }
         } else {
             resultLabel.text = String(digit)
         }
     }
     
     private func setAction(symbol: Character) {
-        if resultLabel.text != "0" {
+        if resultLabel.text != "0", calcAction == nil, resultLabel.text?.last != "." {
             switch symbol {
             case "+":
                 calcAction = .Add
@@ -50,9 +55,30 @@ class ViewController: UIViewController {
             resultLabel.text? += String(symbol)
         }
     }
+    
+    private func getAction() -> String? {
+        if calcAction != nil {
+            var symbol: String!
+            switch calcAction {
+            case .Add:
+                symbol = "+"
+            case .Subtract:
+                symbol = "−"
+            case .Multiply:
+                symbol = "×"
+            case .Divide:
+                symbol = "÷"
+            default:
+                return nil
+            }
+            return symbol
+        }
+        return nil
+    }
 
     @IBAction func clearPressed(_ sender: Any) {
         resultLabel.text = "0"
+        calcAction = nil
     }
     
     @IBAction func btn0(_ sender: Any) {
@@ -111,20 +137,69 @@ class ViewController: UIViewController {
         setAction(symbol: "÷")
     }
     
+    @IBAction func btnNegative(_ sender: Any) {
+        if calcAction == nil {
+            if let num = resultLabel.text, num != "0" {
+                if num.first == "-" {
+                    resultLabel.text = String(num.dropFirst())
+                } else {
+                    resultLabel.text = "-" + num
+                }
+            }
+            
+        } else {
+            
+            if let nums = resultLabel.text?.components(separatedBy: CharacterSet.symbols), let action = getAction() {
+                resultLabel.text = nums[0] + action + "(-\(nums[1])"
+                if nums[1].first == "(" {
+                    resultLabel.text = nums[0] + action + String(nums[1].dropFirst(2).dropLast())
+                } else {
+                    resultLabel.text = nums[0] + action + "(-\(nums[1]))"
+                }
+                
+            }
+            
+        }
+    }
+    
+    @IBAction func btnPercent(_ sender: Any) {
+        if calcAction == nil {
+            if let num = resultLabel.text {
+                resultLabel.text = String(Calculator.getPercentage(num: Double(num)!))
+            }
+        }
+    }
+    
+    
     @IBAction func addDecimalPoint(_ sender: Any) {
-        resultLabel.text? += String(".")
+        if calcAction == nil {
+            if resultLabel.text!.contains(".") {
+                return
+            } else {
+                resultLabel.text? += String(".")
+            }
+        } else {
+            let num = resultLabel.text?.components(separatedBy: CharacterSet.symbols)[1]
+            if num!.contains(".") {
+                return
+            } else {
+                resultLabel.text? += String(".")
+            }
+        }
     }
     
     
     @IBAction func calculatePressed(_ sender: Any) {
         
         guard let nums = resultLabel.text?.components(separatedBy: CharacterSet.symbols) else { return }
-        guard nums.count == 2 else {
-            print(nums.count)
-            return }
+        guard nums.count == 2, nums[0] != "", nums[1] != "" else { return }
         
         let left = nums[0]
-        let right = nums[1]
+        var right = nums[1]
+        if right.first == "(" {
+            right = String(right.dropFirst())
+            right = String(right.dropLast())
+        }
         switch calcAction {
         case .Add:
             let result = Calculator.add(lhs: Double(left)!, rhs: Double(right)!)
@@ -157,7 +232,7 @@ class ViewController: UIViewController {
         default:
             return
         }
-        
+        calcAction = nil
         
     }
 }

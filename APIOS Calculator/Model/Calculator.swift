@@ -26,4 +26,8 @@ class Calculator {
         }
         return lhs / rhs
     }
+    
+    static func getPercentage(num: Double) -> Double {
+        return num / 100
+    }
 }

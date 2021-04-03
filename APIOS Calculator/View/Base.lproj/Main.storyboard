@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uls-Za-jIU" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="15" y="340" width="90" height="90"/>
+                                <rect key="frame" x="20" y="336" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -29,25 +29,31 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VoB-SL-MVv" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="113" y="340" width="90" height="90"/>
+                                <rect key="frame" x="117" y="336" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
                                 <state key="normal" title="+/-">
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnNegative:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eml-ik-fd0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fT-k5-QaV" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="211" y="340" width="90" height="90"/>
+                                <rect key="frame" x="215" y="336" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
                                 <state key="normal" title="%">
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnPercent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4sn-UP-rXB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxV-ew-Qg1" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="309" y="340" width="90" height="90"/>
+                                <rect key="frame" x="312" y="336" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -59,7 +65,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKc-ev-bU6" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="15" y="438" width="90" height="90"/>
+                                <rect key="frame" x="20" y="438" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -71,7 +77,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jut-YH-g4L" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="113" y="438" width="90" height="90"/>
+                                <rect key="frame" x="117" y="438" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -83,7 +89,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCL-UF-9xI" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="211" y="438" width="90" height="90"/>
+                                <rect key="frame" x="215" y="438" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -95,7 +101,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0el-ZW-dOt" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="309" y="438" width="90" height="90"/>
+                                <rect key="frame" x="312" y="438" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -107,7 +113,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeL-BS-dd9" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="15" y="536" width="90" height="90"/>
+                                <rect key="frame" x="20" y="536" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -119,7 +125,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVb-YX-E5D" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="113" y="536" width="90" height="90"/>
+                                <rect key="frame" x="117" y="536" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -131,7 +137,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9D0-qw-ES5" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="211" y="536" width="90" height="90"/>
+                                <rect key="frame" x="215" y="536" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -143,7 +149,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXO-Od-t3K" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="309" y="536" width="90" height="90"/>
+                                <rect key="frame" x="312" y="536" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -155,7 +161,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4w-0H-dyv" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="15" y="634" width="90" height="90"/>
+                                <rect key="frame" x="20" y="634" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -167,7 +173,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywe-d8-8K7" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="113" y="634" width="90" height="90"/>
+                                <rect key="frame" x="117" y="634" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -179,7 +185,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvg-mM-yjT" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="211" y="634" width="90" height="90"/>
+                                <rect key="frame" x="215" y="634" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -191,7 +197,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usz-Co-xvn" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="309" y="634" width="90" height="90"/>
+                                <rect key="frame" x="312" y="634" width="82" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -202,20 +208,8 @@
                                     <action selector="btnPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ri-Lz-OnB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppb-JG-haM" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="15" y="732" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
-                                <state key="normal" title="0">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="btn0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vu7-p7-aHO"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b95-bV-iXS" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="113" y="732" width="188" height="90"/>
+                                <rect key="frame" x="117" y="732" width="180" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -227,7 +221,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1g-7L-DhO" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="309" y="732" width="90" height="90"/>
+                                <rect key="frame" x="312" y="732" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
@@ -238,7 +232,7 @@
                                     <action selector="addDecimalPoint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cQF-lj-CoN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="JXa-QA-zek" userLabel="Result Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="JXa-QA-zek" userLabel="Result Label">
                                 <rect key="frame" x="48" y="95" width="318" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.88706246700000002" green="0.88706246700000002" blue="0.88706246700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -246,6 +240,18 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppb-JG-haM" customClass="Button" customModule="APIOS_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="732" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vu7-p7-aHO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
